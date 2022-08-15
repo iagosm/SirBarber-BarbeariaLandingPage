@@ -1,0 +1,114 @@
+body{
+    font-family: 'Epilogue', sans-serif;
+}
+
+:root{
+    --corRed1: #BA181B;
+    --red2: #E5383B;
+    --black1: #0B090A;
+    --black2: #161A1D;
+    --branco1: #ffffff;
+    --branco2: #f5f3f4;
+    --branco3: #f5f3f4;
+}
+/* :root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+} */
+
+/* INICIO HEADER  */
+
+#header-container{
+    background-color: var(--black1);
+    
+}
+
+.header{
+    
+    /* 24 em cima e embaixo/ 72 nas laterais  */
+    padding: 24px 72px;
+    color: var(--branco1);
+    /* DISPLAY FLEX PARA TRANSFORMAR EM OBJETOS INLINE */
+    display: flex;
+    /* JUSTIFY PARA ALINHAR OS ELEMENTOS DE FORMA HORIZONTAL */
+    justify-content: space-between; 
+    /* BETWEEN utulizado para distribuir os elementos e o que sobra ele deixa entre os elementos*/
+    /* ALIGNITEMS ORGANIZA ELES DE FORMA VERTICAL */
+    align-items:center ;
+    
+}
+/* Classe q vai limitar o tamanho da pagina/ elemento */
+.container{
+    /* deixar uma largura maxima de 1280px */
+    max-width: 1280px;
+    /* MARGIN EXTREMAMENTE IMPORTANTE PARA ALINHAR POIS SEM ELE FICARIA MALA ORGANIZADO, assim divindo o espaço para as duas laterais usando auto */
+    margin: 0 auto;
+}
+
+.btn{
+    padding: 20px 40px;    
+    color: var(--branco1);   
+    /* UPPERCASE UTILIZADO PARA DEIXAR COM BOTÃO GRANDE */
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.btn-small{  /* Nessa class ela irá sobreescrever todo botão com a tag small para ficar menor */
+    /* Irá ficar como tamanho pequeno */
+     /* 14px altura / 24px nas laterais */
+     padding: 12px 24px;
+     font-size: 0.9rem;
+
+}
+
+.btn-primary{ /* Nessa class ela irá cuidar da cor */
+    background-color: var(--corRed1);
+
+}
+
+.btn-outline{ /* Nessa class ela irá cuidar do tipo do botão. Outline é a linha por fora */
+    background-color: transparent;
+    border: 2px solid var(--branco1);
+}
+
+/* FINAL HEADER */
+
+
+/* INICIO MAIN  */
+
+    #hero-container{
+        background-color: var(--black1);
+        color: var(--branco1);
+        
+    }
+
+    .hero{
+        display: flex;
+
+    }
+
+    .hero-text, .hero-img{
+        flex: 1;
+    }
+
+    .hero-text__tittle{
+        font-size: 56px;
+        line-height: 64px;
+        font-weight: 700;
+    }
+    .hero-text__subtitle{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+/* FINAL MAIN */
+
+
+
+/* INICIO FOOTER  */
+
+
+/* FINAL FOOTER */
