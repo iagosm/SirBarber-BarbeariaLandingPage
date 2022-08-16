@@ -60,3 +60,8 @@ button{
 	/* ALGUNS NAVEGADORES FICA UMA LINHA, É BOM COLOCAR PARA GARANTIR  */
 	outline: none;
 }
+/* DIZENDO Q TODA IMAGEM DEVE SER COLADA AO Bottom */
+iframe, img{
+	vertical-align: bottom;
+}
+

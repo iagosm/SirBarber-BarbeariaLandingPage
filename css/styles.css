@@ -9,7 +9,7 @@ body{
     --black2: #161A1D;
     --branco1: #ffffff;
     --branco2: #f5f3f4;
-    --branco3: #f5f3f4;
+    --branco3: #D3D3D3;
 }
 /* :root {
     --corRosa: #b31545;
@@ -53,6 +53,9 @@ body{
     /* UPPERCASE UTILIZADO PARA DEIXAR COM BOTÃO GRANDE */
     text-transform: uppercase;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .btn-small{  /* Nessa class ela irá sobreescrever todo botão com a tag small para ficar menor */
@@ -64,13 +67,24 @@ body{
 }
 
 .btn-primary{ /* Nessa class ela irá cuidar da cor */
-    background-color: var(--corRed1);
+    background-color: var(--red2); 
+    cursor: pointer;   
+}
 
+.btn-primary:hover{
+    background-color: #941B1D;
 }
 
 .btn-outline{ /* Nessa class ela irá cuidar do tipo do botão. Outline é a linha por fora */
     background-color: transparent;
     border: 2px solid var(--branco1);
+    cursor: pointer;
+}
+
+.btn-outline:hover{
+    border-color: #D9D9D9;
+    color: #D9D9D9;
+    
 }
 
 /* FINAL HEADER */
@@ -81,16 +95,38 @@ body{
     #hero-container{
         background-color: var(--black1);
         color: var(--branco1);
+        padding: 0 72px;
         
     }
 
     .hero{
         display: flex;
-
+        /* Alinhando para que o texto se encaminhe para o centro */
+        align-items: center;
+        /* Gap para dar espaçamento entre o texto e a imagem  */
+        gap: 32px;
     }
 
-    .hero-text, .hero-img{
+    .hero-img{
         flex: 1;
+        align-self: flex-end;
+    }
+
+    .hero-img img{
+        /* Definindo a largura maxima para que a imagem não passe do tamanho do bloco, no caso o container div */
+        max-width: 100%;
+        
+    }
+
+    .hero-text{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        /* Colocamos como flex start pq vem de base como stretch já preenchendo a box mais do que o necessario e não é isso que queremos */
+        align-items: flex-start;
+        /* Gap dando espaçamento entre os elementos  */
+        gap: 16px ;
+        padding: 96px 0;
     }
 
     .hero-text__tittle{
@@ -101,8 +137,81 @@ body{
     .hero-text__subtitle{
         font-size: 20px;
         line-height: 28px;
+        /* usando maximo de largurar para definir o tamanho da font fazendo com que fique 3 linhas o subtitulo */
+        max-width: 520px;
     }
 
+    /* SERVICES SECTION */
+
+    .overtitle{
+        color: var(--red2);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+
+    .title{ 
+        font-size: 44px;
+        line-height: 56px;
+        font-weight: 700px;
+    }
+
+    #services-container{
+        padding: 96px 72px;
+    }
+
+    .services-list{
+        margin: 48px;
+        display: flex;
+        gap: 32px;
+    }
+
+    .services-card{
+        background-color: var(--branco2);
+        border: 2px solid var(--branco3);
+    }
+
+
+    .services-card img{
+        width: 100%;
+    }
+
+    .services-card__text{
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .services-card__text h3{
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .services-card__text p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    /* FINAL SERVICES SECTION  */
+
+    /* LOCATION SECTION  */
+    #location-container{
+        background-color: var(--branco2);
+        padding: 48px 0 0;
+    }
+
+    #location-container .location{
+        padding: 96px 72px 48px;
+    }
+
+    #location-container address{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+}
 
 /* FINAL MAIN */
 
@@ -110,5 +219,22 @@ body{
 
 /* INICIO FOOTER  */
 
+footer{
+    background-color: var(--black1);
+    color: var(--branco1);
+    padding: 48px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ footer a{
+    color: currentColor;
+ }
+
+.footer-logocopy svg{
+    display: flex;
+    margin-bottom: 10px;
+}
 
 /* FINAL FOOTER */
